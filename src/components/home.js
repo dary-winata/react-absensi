@@ -1,21 +1,19 @@
-import { Container } from 'react-bootstrap';
 import Navbar from './navbar'
 import background from './item/download.jpeg'
+import valueBg from './item/bumega.jpg'
 
 const Home = () => {
     return (
-        <Container>
-            <main className="col-md-12 ms-sm-auto col-lg-12 px-md-12">
-                <Navbar />
-                <div style={{backgroundImage: `url(${background})` }}>
-                    <h1>Kontol</h1>
-                    <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-                    <p className="lead">
-                    <a href="#" className="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-                    </p>
+        <main className="col-md-12 ms-sm-auto col-lg-12 px-md-12">
+            <Navbar />
+            <div style={{ backgroundImage: `url(${background})`, width: "100vw", height: "100vh", backgroundSize:'cover' }}>
+                <div style={{ display: "flex",  width: "75vw", height: "60vh", backgroundColor: "white", borderRadius: "2%",
+                    position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}>
+                    <text style={{ left: "100%", fontSize: "40px", maxWidth: "30vw"}}>PDIP Perjuangan Perkuat Gerak Kemanusiaan, Luncurkan Kendaraan Serbaguna</text>
+                    <img style={{ backgroundImage: `url(${valueBg})`, float: "right", width: "30vw"}} />
                 </div>
-            </main>
-        </Container>
+            </div>
+        </main>
     )
 }
 
